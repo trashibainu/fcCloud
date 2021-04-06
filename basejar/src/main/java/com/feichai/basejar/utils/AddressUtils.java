@@ -1,4 +1,4 @@
-package com.feichai.com.feichai.utils;
+package com.feichai.basejar.utils;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
