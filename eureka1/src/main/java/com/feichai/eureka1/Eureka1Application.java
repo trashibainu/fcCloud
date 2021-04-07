@@ -1,4 +1,4 @@
-package com.feichai.erueka;
+package com.feichai.eureka1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class EruekaApplication {
+public class Eureka1Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(EruekaApplication.class, args);
+        SpringApplication.run(Eureka1Application.class, args);
     }
 
 }
