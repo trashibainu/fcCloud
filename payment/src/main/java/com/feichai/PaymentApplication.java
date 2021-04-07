@@ -1,4 +1,4 @@
-package com.feichai.order;
+package com.feichai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,9 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class OrderApplication {
+public class PaymentApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class,args);
+        SpringApplication.run(PaymentApplication.class,args);
     }
 
     @Bean

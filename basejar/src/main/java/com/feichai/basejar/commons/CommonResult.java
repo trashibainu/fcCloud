@@ -1,12 +1,15 @@
 package com.feichai.basejar.commons;
 
-import com.alibaba.fastjson.JSONObject;
 import com.feichai.basejar.enums.ResultCode;
 
-public class CommonResult<T> {
+import java.io.Serializable;
+
+public class CommonResult<T> implements Serializable {
     private int code;
     private String msg;
     private T data;
+
+    public CommonResult(){}
 
     public CommonResult(int code, String msg, T data) {
         this.code=code;
@@ -30,11 +33,4 @@ public class CommonResult<T> {
         return new CommonResult(ResultCode.ERROR.getCode(),ResultCode.ERROR.getMsg(),data);
     }
 
-    private String toJson(){
-        return JSONObject.toJSONString(this);
-    }
-
-    public String toString(){
-        return "{\"code\":"+code+",\"msg\":\""+msg+"\",\"data\":"+toJson()+"}";
-    }
 }

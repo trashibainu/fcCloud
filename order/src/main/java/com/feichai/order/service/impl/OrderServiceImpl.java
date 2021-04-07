@@ -15,7 +15,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public CommonResult queryOrderInfoById(String id) {
-
-        return CommonResult.success(orderMapper.queryOrderInfoById(id));
+        Order order=orderMapper.queryOrderInfoById(id);
+        return CommonResult.success(order);
     }
 }

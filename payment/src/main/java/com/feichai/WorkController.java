@@ -1,8 +1,11 @@
-package com.feichai.order;
+package com.feichai;
 
+import com.google.gson.Gson;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
@@ -16,6 +19,12 @@ public class WorkController {
     @Resource
     DataSource dataSource;
 
+    @Resource
+    RestTemplate restTemplate;
+
+    @Resource
+    Gson gson;
+
     @ResponseBody
     @RequestMapping("/status")
     public String work() throws SQLException {
@@ -23,5 +32,11 @@ public class WorkController {
         String result="连接时间："+System.currentTimeMillis()+"，连接结果："+connection.getCatalog();
         connection.close();
         return result;
+    }
+    @ResponseBody
+    @RequestMapping("/test")
+    public String test() {
+        ResponseEntity<String> forEntity=restTemplate.getForEntity("http://localhost:8200/order/query/1", String.class);
+        return forEntity.getBody();
     }
 }

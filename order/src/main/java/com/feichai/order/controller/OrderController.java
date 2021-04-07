@@ -1,6 +1,8 @@
 package com.feichai.order.controller;
 
+import com.feichai.basejar.commons.CommonResult;
 import com.feichai.order.service.OrderService;
+import com.google.gson.Gson;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,11 +15,12 @@ public class OrderController {
 
     @Resource
     OrderService orderService;
+    @Resource
+    Gson gson;
 
     @ResponseBody
     @RequestMapping(value = "/query/{id}",method = RequestMethod.GET)
     public String queryOrderInfoById(@PathVariable("id") String id){
-
-        return orderService.queryOrderInfoById(id).toString();
+        return gson.toJson(orderService.queryOrderInfoById(id));
     }
 }
