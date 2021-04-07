@@ -1,4 +1,4 @@
-package com.feichai.payment;
+package com.feichai.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
