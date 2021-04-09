@@ -25,6 +25,10 @@ public class CommonResult<T> implements Serializable {
         return new CommonResult(ResultCode.SUCCESS.getCode(),ResultCode.SUCCESS.getMsg(),data);
     }
 
+    public static <T> CommonResult success(T data,String msg){
+        return new CommonResult(ResultCode.SUCCESS.getCode(),msg,data);
+    }
+
     public static <T> CommonResult failed(){
         return new CommonResult(ResultCode.ERROR.getCode(),ResultCode.ERROR.getMsg(),null);
     }

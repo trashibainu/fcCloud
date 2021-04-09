@@ -13,6 +13,7 @@
         <module>order</module>
         <module>eureka</module>
         <module>eureka1</module>
+        <module>order1</module>
     </modules>
     <dependencies>
         <dependency>
