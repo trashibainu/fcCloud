@@ -1,0 +1,1 @@
+1、需要先在linux上启动zookeeper服务

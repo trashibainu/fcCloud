@@ -15,6 +15,7 @@
         <module>eureka1</module>
         <module>order1</module>
         <module>orderzk</module>
+        <module>orderConsul</module>
     </modules>
 
     <packaging>pom</packaging>
