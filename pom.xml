@@ -8,12 +8,8 @@
     <artifactId>Server</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>payment</module>
         <module>basejar</module>
-        <module>order</module>
-        <module>eureka</module>
-        <module>eureka1</module>
-        <module>order1</module>
+        <module>payment</module>
         <module>orderzk</module>
         <module>orderConsul</module>
     </modules>
