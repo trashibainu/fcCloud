@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 8001
 
 
 eureka:
@@ -9,4 +9,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka1.com:8001/
+      defaultZone: http://eureka1.com:8002/

@@ -3,6 +3,8 @@ package com.feichai.basejar.commons;
 import com.feichai.basejar.enums.ResultCode;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CommonResult<T> implements Serializable {
     private int code;
@@ -27,6 +29,14 @@ public class CommonResult<T> implements Serializable {
 
     public static <T> CommonResult success(T data,String msg){
         return new CommonResult(ResultCode.SUCCESS.getCode(),msg,data);
+    }
+
+    public static <T> CommonResult success(T ... data){
+        List<T> list=new ArrayList<>();
+        for (int i = 0; i < data.length; i++) {
+            list.add(data[i]);
+        }
+        return new CommonResult(ResultCode.SUCCESS.getCode(),ResultCode.SUCCESS.getMsg(),list);
     }
 
     public static <T> CommonResult failed(){

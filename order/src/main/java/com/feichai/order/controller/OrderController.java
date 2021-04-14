@@ -2,6 +2,7 @@ package com.feichai.order.controller;
 
 import com.feichai.order.service.OrderService;
 import com.google.gson.Gson;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,7 @@ public class OrderController {
     OrderService orderService;
     @Resource
     Gson gson;
+
 
     @ResponseBody
     @RequestMapping(value = "/query/{id}",method = RequestMethod.GET)
