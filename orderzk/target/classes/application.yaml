@@ -1,0 +1,9 @@
+server:
+  port: 8202
+
+spring:
+  application:
+    name: feichai-order-service
+  cloud:
+    zookeeper:
+      connect-string: 47.102.223.25:2181

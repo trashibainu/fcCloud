@@ -1,0 +1,16 @@
+server.port=8080
+server.servlet.context-path=/
+server.tomcat.accesslog.encoding=UTF-8
+
+spring.messages.basename=i18n/messages
+spring.profiles=druid
+spring.redis.host=47.102.223.25
+spring.redis.port=6379
+
+mybatis.type-aliases-package=com.feichai.admin.**.domain
+mybatis.mapper-locations=classpath*:mapper/**/*Mapper.xml
+mybatis.config-location=classpath:mybatis/mybatis-config.xml
+
+xss.enabled=true
+xss.excludes=/system/notice/*
+xss.urlPatterns=/system/*,/monitor/*,/tool/*
