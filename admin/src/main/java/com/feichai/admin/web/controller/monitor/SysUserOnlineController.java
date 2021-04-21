@@ -8,6 +8,7 @@ import java.util.List;
 import com.feichai.admin.common.core.domain.AjaxResult;
 import com.feichai.admin.common.core.page.TableDataInfo;
 import com.feichai.admin.common.core.redis.RedisCache;
+import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.system.service.ISysUserOnlineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,12 +22,11 @@ import com.feichai.admin.common.constant.Constants;
 import com.feichai.admin.common.core.controller.BaseController;
 import com.feichai.admin.common.core.domain.model.LoginUser;
 import com.feichai.admin.common.enums.BusinessType;
-import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.system.domain.SysUserOnline;
 
 /**
  * 在线用户监控
- * 
+ *
  * @author ruoyi
  */
 @RestController
