@@ -93,6 +93,7 @@ mybatis:
   typeAliasesPackage: com.feichai.admin.**.domain
   configLocation: classpath:mybatis/mybatis-config.xml
   mapperLocations: classpath*:mapper/**/*Mapper.xml
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 # PageHelper分页插件
 pagehelper:
