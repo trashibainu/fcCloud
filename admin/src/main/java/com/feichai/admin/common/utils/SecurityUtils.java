@@ -1,8 +1,8 @@
 package com.feichai.admin.common.utils;
 
 import com.feichai.admin.common.constant.HttpStatus;
-import com.feichai.admin.common.core.domain.model.LoginUser;
 import com.feichai.admin.common.exception.CustomException;
+import com.feichai.admin.common.core.domain.model.LoginUser;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

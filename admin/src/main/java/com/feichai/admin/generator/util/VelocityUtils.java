@@ -1,11 +1,11 @@
 package com.feichai.admin.generator.util;
 
 import com.alibaba.fastjson.JSONObject;
+import com.feichai.admin.generator.domain.GenTable;
+import com.feichai.admin.generator.domain.GenTableColumn;
 import com.feichai.admin.common.constant.GenConstants;
 import com.feichai.admin.common.utils.DateUtils;
 import com.feichai.admin.common.utils.StringUtils;
-import com.feichai.admin.generator.domain.GenTable;
-import com.feichai.admin.generator.domain.GenTableColumn;
 import org.apache.velocity.VelocityContext;
 
 import java.util.ArrayList;

@@ -1,19 +1,17 @@
 package com.feichai.admin.common.utils.poi;
 
 import com.feichai.admin.common.annotation.Excel;
-import com.feichai.admin.common.annotation.Excel.ColumnType;
-import com.feichai.admin.common.annotation.Excel.Type;
 import com.feichai.admin.common.annotation.Excels;
 import com.feichai.admin.common.config.RuoYiConfig;
-import com.feichai.admin.common.core.domain.AjaxResult;
-import com.feichai.admin.common.core.text.Convert;
 import com.feichai.admin.common.exception.CustomException;
-import com.feichai.admin.common.utils.DateUtils;
-import com.feichai.admin.common.utils.DictUtils;
-import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.common.utils.file.FileTypeUtils;
 import com.feichai.admin.common.utils.file.ImageUtils;
 import com.feichai.admin.common.utils.reflect.ReflectUtils;
+import com.feichai.admin.common.core.domain.AjaxResult;
+import com.feichai.admin.common.core.text.Convert;
+import com.feichai.admin.common.utils.DateUtils;
+import com.feichai.admin.common.utils.DictUtils;
+import com.feichai.admin.common.utils.StringUtils;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddressList;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
@@ -51,7 +49,7 @@ public class ExcelUtil<T>
     /**
      * 导出类型（EXPORT:导出数据；IMPORT：导入模板）
      */
-    private Type type;
+    private Excel.Type type;
 
     /**
      * 工作薄对象
@@ -103,7 +101,7 @@ public class ExcelUtil<T>
         this.clazz = clazz;
     }
 
-    public void init(List<T> list, String sheetName, Type type)
+    public void init(List<T> list, String sheetName, Excel.Type type)
     {
         if (list == null)
         {
@@ -136,7 +134,7 @@ public class ExcelUtil<T>
      */
     public List<T> importExcel(String sheetName, InputStream is) throws Exception
     {
-        this.type = Type.IMPORT;
+        this.type = Excel.Type.IMPORT;
         this.wb = WorkbookFactory.create(is);
         List<T> list = new ArrayList<T>();
         Sheet sheet = null;
@@ -185,7 +183,7 @@ public class ExcelUtil<T>
             {
                 Field field = allFields[col];
                 Excel attr = field.getAnnotation(Excel.class);
-                if (attr != null && (attr.type() == Type.ALL || attr.type() == type))
+                if (attr != null && (attr.type() == Excel.Type.ALL || attr.type() == type))
                 {
                     // 设置类的私有字段属性可访问.
                     field.setAccessible(true);
@@ -304,7 +302,7 @@ public class ExcelUtil<T>
      */
     public AjaxResult exportExcel(List<T> list, String sheetName)
     {
-        this.init(list, sheetName, Type.EXPORT);
+        this.init(list, sheetName, Excel.Type.EXPORT);
         return exportExcel();
     }
 
@@ -316,7 +314,7 @@ public class ExcelUtil<T>
      */
     public AjaxResult importTemplateExcel(String sheetName)
     {
-        this.init(null, sheetName, Type.IMPORT);
+        this.init(null, sheetName, Excel.Type.IMPORT);
         return exportExcel();
     }
 
@@ -345,7 +343,7 @@ public class ExcelUtil<T>
                     Excel excel = (Excel) os[1];
                     this.createCell(excel, row, column++);
                 }
-                if (Type.EXPORT.equals(type))
+                if (Excel.Type.EXPORT.equals(type))
                 {
                     fillExcelData(index, row);
                     addStatisticsRow();
@@ -506,15 +504,15 @@ public class ExcelUtil<T>
      */
     public void setCellVo(Object value, Excel attr, Cell cell)
     {
-        if (ColumnType.STRING == attr.cellType())
+        if (Excel.ColumnType.STRING == attr.cellType())
         {
             cell.setCellValue(StringUtils.isNull(value) ? attr.defaultValue() : value + attr.suffix());
         }
-        else if (ColumnType.NUMERIC == attr.cellType())
+        else if (Excel.ColumnType.NUMERIC == attr.cellType())
         {
             cell.setCellValue(StringUtils.contains(Convert.toStr(value), ".") ? Convert.toDouble(value) : Convert.toInt(value));
         }
-        else if (ColumnType.IMAGE == attr.cellType())
+        else if (Excel.ColumnType.IMAGE == attr.cellType())
         {
             ClientAnchor anchor = new XSSFClientAnchor(0, 0, 0, 0, (short) cell.getColumnIndex(), cell.getRow().getRowNum(), (short) (cell.getColumnIndex() + 1),
                     cell.getRow().getRowNum() + 1);
@@ -971,7 +969,7 @@ public class ExcelUtil<T>
      */
     private void putToField(Field field, Excel attr)
     {
-        if (attr != null && (attr.type() == Type.ALL || attr.type() == type))
+        if (attr != null && (attr.type() == Excel.Type.ALL || attr.type() == type))
         {
             this.fields.add(new Object[] { field, attr });
         }

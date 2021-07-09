@@ -1,8 +1,9 @@
-package com.feichai;
+package com.feichai.order;
 
 import com.google.gson.Gson;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
@@ -25,10 +26,10 @@ public class WorkController {
     @Resource
     Gson gson;
 
-    public static final String ORDER_REMOTE_URL="http://FEICHAI-ORDER-SERVICE";
+    public static final String ORDER_REMOTE_URL="http://FEICHAI-PAYMENT-SERVICE";
 
     @ResponseBody
-    @RequestMapping("/status")
+    @GetMapping("/status")
     public String work() throws SQLException {
         Connection connection=dataSource.getConnection();
         String result="连接时间："+System.currentTimeMillis()+"，连接结果："+connection.getCatalog();
@@ -36,7 +37,7 @@ public class WorkController {
         return result;
     }
     @ResponseBody
-    @RequestMapping("/test")
+    @GetMapping("/test")
     public String test() {
         ResponseEntity<String> forEntity=restTemplate.getForEntity(ORDER_REMOTE_URL+"/order/query/1", String.class);
         return forEntity.getBody();

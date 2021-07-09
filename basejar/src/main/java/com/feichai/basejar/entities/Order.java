@@ -1,6 +1,5 @@
 package com.feichai.basejar.entities;
 
-import com.sun.scenario.effect.impl.prism.PrImage;
 import lombok.Data;
 
 @Data

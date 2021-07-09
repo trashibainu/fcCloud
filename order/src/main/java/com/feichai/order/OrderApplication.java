@@ -1,20 +1,17 @@
-package com.feichai.orderConsul;
+package com.feichai.order;
 
-import com.feichai.orderConsul.ribbon.Ruler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@RibbonClient(name = "",configuration = Ruler.class)
-public class OrderConsulApplication {
+public class OrderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderConsulApplication.class,args);
+        SpringApplication.run(OrderApplication.class,args);
     }
 
     @Bean
@@ -22,4 +19,5 @@ public class OrderConsulApplication {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
 }

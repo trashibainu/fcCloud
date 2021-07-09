@@ -1,14 +1,14 @@
 package com.feichai.admin.quartz.util;
 
+import com.feichai.admin.quartz.domain.SysJob;
+import com.feichai.admin.quartz.domain.SysJobLog;
+import com.feichai.admin.quartz.service.ISysJobLogService;
 import com.feichai.admin.common.constant.Constants;
 import com.feichai.admin.common.constant.ScheduleConstants;
 import com.feichai.admin.common.utils.ExceptionUtil;
 import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.common.utils.bean.BeanUtils;
 import com.feichai.admin.common.utils.spring.SpringUtils;
-import com.feichai.admin.quartz.domain.SysJob;
-import com.feichai.admin.quartz.domain.SysJobLog;
-import com.feichai.admin.quartz.service.ISysJobLogService;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;

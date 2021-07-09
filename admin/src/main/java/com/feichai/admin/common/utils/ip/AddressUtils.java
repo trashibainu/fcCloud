@@ -3,8 +3,8 @@ package com.feichai.admin.common.utils.ip;
 import com.alibaba.fastjson.JSONObject;
 import com.feichai.admin.common.config.RuoYiConfig;
 import com.feichai.admin.common.constant.Constants;
-import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.common.utils.http.HttpUtils;
+import com.feichai.admin.common.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

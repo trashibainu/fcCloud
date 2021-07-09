@@ -1,7 +1,6 @@
 package com.feichai.admin.common.core.domain.entity;
 
 import com.feichai.admin.common.annotation.Excel;
-import com.feichai.admin.common.annotation.Excel.ColumnType;
 import com.feichai.admin.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -19,7 +18,7 @@ public class SysRole extends BaseEntity
     private static final long serialVersionUID = 1L;
 
     /** 角色ID */
-    @Excel(name = "角色序号", cellType = ColumnType.NUMERIC)
+    @Excel(name = "角色序号", cellType = Excel.ColumnType.NUMERIC)
     private Long roleId;
 
     /** 角色名称 */

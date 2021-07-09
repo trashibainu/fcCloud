@@ -1,8 +1,8 @@
 package com.feichai.admin.framework.config;
 
+import com.feichai.admin.framework.interceptor.RepeatSubmitInterceptor;
 import com.feichai.admin.common.config.RuoYiConfig;
 import com.feichai.admin.common.constant.Constants;
-import com.feichai.admin.framework.interceptor.RepeatSubmitInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

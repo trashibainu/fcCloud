@@ -1,10 +1,10 @@
 package com.feichai.admin.generator.util;
 
-import com.feichai.admin.common.constant.GenConstants;
-import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.generator.config.GenConfig;
 import com.feichai.admin.generator.domain.GenTable;
 import com.feichai.admin.generator.domain.GenTableColumn;
+import com.feichai.admin.common.constant.GenConstants;
+import com.feichai.admin.common.utils.StringUtils;
 import org.apache.commons.lang3.RegExUtils;
 
 import java.util.Arrays;

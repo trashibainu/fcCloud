@@ -18,6 +18,7 @@ import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.common.utils.poi.ExcelUtil;
 import com.feichai.admin.framework.web.service.TokenService;
 import com.feichai.admin.system.service.ISysPostService;
+import com.feichai.admin.system.service.ISysRoleService;
 import com.feichai.admin.system.service.ISysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -31,7 +32,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import com.feichai.admin.system.service.ISysRoleService;
 
 /**
  * 用户信息

@@ -1,8 +1,8 @@
 package com.feichai.admin.quartz.util;
 
+import com.feichai.admin.quartz.domain.SysJob;
 import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.common.utils.spring.SpringUtils;
-import com.feichai.admin.quartz.domain.SysJob;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

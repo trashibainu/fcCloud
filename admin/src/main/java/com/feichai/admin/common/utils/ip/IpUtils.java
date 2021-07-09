@@ -1,7 +1,7 @@
 package com.feichai.admin.common.utils.ip;
 
-import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.common.utils.html.EscapeUtil;
+import com.feichai.admin.common.utils.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;

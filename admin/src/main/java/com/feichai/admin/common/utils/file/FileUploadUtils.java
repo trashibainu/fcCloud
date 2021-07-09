@@ -5,9 +5,9 @@ import com.feichai.admin.common.constant.Constants;
 import com.feichai.admin.common.exception.file.FileNameLengthLimitExceededException;
 import com.feichai.admin.common.exception.file.FileSizeLimitExceededException;
 import com.feichai.admin.common.exception.file.InvalidExtensionException;
+import com.feichai.admin.common.utils.uuid.IdUtils;
 import com.feichai.admin.common.utils.DateUtils;
 import com.feichai.admin.common.utils.StringUtils;
-import com.feichai.admin.common.utils.uuid.IdUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.multipart.MultipartFile;
 

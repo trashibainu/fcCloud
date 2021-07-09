@@ -1,6 +1,8 @@
 package com.feichai.admin.framework.aspectj;
 
 import com.alibaba.fastjson.JSON;
+import com.feichai.admin.framework.manager.AsyncManager;
+import com.feichai.admin.framework.manager.factory.AsyncFactory;
 import com.feichai.admin.common.annotation.Log;
 import com.feichai.admin.common.core.domain.model.LoginUser;
 import com.feichai.admin.common.enums.BusinessStatus;
@@ -9,8 +11,6 @@ import com.feichai.admin.common.utils.ServletUtils;
 import com.feichai.admin.common.utils.StringUtils;
 import com.feichai.admin.common.utils.ip.IpUtils;
 import com.feichai.admin.common.utils.spring.SpringUtils;
-import com.feichai.admin.framework.manager.AsyncManager;
-import com.feichai.admin.framework.manager.factory.AsyncFactory;
 import com.feichai.admin.framework.web.service.TokenService;
 import com.feichai.admin.system.domain.SysOperLog;
 import org.aspectj.lang.JoinPoint;

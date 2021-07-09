@@ -1,7 +1,6 @@
 package com.feichai.admin.common.core.domain.entity;
 
 import com.feichai.admin.common.annotation.Excel;
-import com.feichai.admin.common.annotation.Excel.ColumnType;
 import com.feichai.admin.common.constant.UserConstants;
 import com.feichai.admin.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -20,11 +19,11 @@ public class SysDictData extends BaseEntity
     private static final long serialVersionUID = 1L;
 
     /** 字典编码 */
-    @Excel(name = "字典编码", cellType = ColumnType.NUMERIC)
+    @Excel(name = "字典编码", cellType = Excel.ColumnType.NUMERIC)
     private Long dictCode;
 
     /** 字典排序 */
-    @Excel(name = "字典排序", cellType = ColumnType.NUMERIC)
+    @Excel(name = "字典排序", cellType = Excel.ColumnType.NUMERIC)
     private Long dictSort;
 
     /** 字典标签 */

@@ -1,9 +1,9 @@
 package com.feichai.admin.common.utils;
 
 import com.feichai.admin.common.constant.Constants;
+import com.feichai.admin.common.utils.spring.SpringUtils;
 import com.feichai.admin.common.core.domain.entity.SysDictData;
 import com.feichai.admin.common.core.redis.RedisCache;
-import com.feichai.admin.common.utils.spring.SpringUtils;
 
 import java.util.Collection;
 import java.util.List;

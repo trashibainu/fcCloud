@@ -1,9 +1,9 @@
 package com.feichai.admin.quartz.util;
 
+import com.feichai.admin.quartz.domain.SysJob;
 import com.feichai.admin.common.constant.ScheduleConstants;
 import com.feichai.admin.common.exception.job.TaskException;
 import com.feichai.admin.common.exception.job.TaskException.Code;
-import com.feichai.admin.quartz.domain.SysJob;
 import org.quartz.*;
 
 /**

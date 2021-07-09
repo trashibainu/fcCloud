@@ -1,5 +1,7 @@
 package com.feichai.admin.framework.web.service;
 
+import com.feichai.admin.framework.manager.AsyncManager;
+import com.feichai.admin.framework.manager.factory.AsyncFactory;
 import com.feichai.admin.common.constant.Constants;
 import com.feichai.admin.common.core.domain.model.LoginUser;
 import com.feichai.admin.common.core.redis.RedisCache;
@@ -8,8 +10,6 @@ import com.feichai.admin.common.exception.user.CaptchaException;
 import com.feichai.admin.common.exception.user.CaptchaExpireException;
 import com.feichai.admin.common.exception.user.UserPasswordNotMatchException;
 import com.feichai.admin.common.utils.MessageUtils;
-import com.feichai.admin.framework.manager.AsyncManager;
-import com.feichai.admin.framework.manager.factory.AsyncFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
