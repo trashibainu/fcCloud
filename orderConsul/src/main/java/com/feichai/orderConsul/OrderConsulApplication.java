@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@RibbonClient(name = "",configuration = Ruler.class)
+//@RibbonClient(name = "FEICHAI-PAYMENT-SERVICE",configuration = Ruler.class)
 public class OrderConsulApplication {
     public static void main(String[] args) {
         SpringApplication.run(OrderConsulApplication.class,args);
