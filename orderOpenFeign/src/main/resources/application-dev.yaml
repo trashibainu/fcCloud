@@ -7,9 +7,7 @@ spring:
     username: root
     password: yuanjing
 
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        service-name: ${spring.application.name}
+# Feign超时报错解决
+ribbon:
+    ReadTimeout: 5000
+    ConnectTimeout: 5000

@@ -14,6 +14,8 @@
         <module>orderzk</module>
         <module>orderConsul</module>
         <module>order</module>
+        <module>orderOpenFeign</module>
+        <module>orderHystrix</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -76,6 +78,10 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+
+
+
             <!--mysql-->
             <dependency>
                 <groupId>mysql</groupId>
