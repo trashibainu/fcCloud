@@ -1,6 +1,7 @@
 package com.feichai.basejar;
 
 import com.feichai.basejar.domain.Child;
+import com.feichai.basejar.domain.Women;
 import org.junit.Test;
 
 public class ITest {
@@ -11,4 +12,11 @@ public class ITest {
         child.run();
     }
 
+
+    @Test
+    public void test1(){
+        Women women=new Women();
+        women.think();
+        women.speak();
+    }
 }

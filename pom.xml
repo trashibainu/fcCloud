@@ -49,6 +49,7 @@
         <poi.version>4.1.2</poi.version>
         <velocity.version>1.7</velocity.version>
         <jwt.version>0.9.1</jwt.version>
+        <lang.version>3.9</lang.version>
     </properties>
 
     <!--子模块继承之后，提供作用：锁定版本+子module不用谢groupId和version-->
@@ -80,8 +81,10 @@
             </dependency>
 
 
-
-
+            <dependency>
+                <groupId>commons-</groupId>
+                <artifactId>lanb</artifactId>
+            </dependency>
             <!--mysql-->
             <dependency>
                 <groupId>mysql</groupId>
@@ -264,6 +267,12 @@
                 <groupId>com.github.penggle</groupId>
                 <artifactId>kaptcha</artifactId>
                 <version>${kaptcha.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${lang.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
