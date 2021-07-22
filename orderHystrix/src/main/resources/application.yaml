@@ -1,11 +1,9 @@
 server:
-  port: 8101
+  port: 8205
 
 spring:
   application:
-    name: feichai-payment-service
-  profiles:
-    active: dev
+    name: feichai-orderHystrix-service
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
