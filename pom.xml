@@ -11,11 +11,7 @@
         <module>basejar</module>
         <module>admin</module>
         <module>payment</module>
-        <module>orderzk</module>
-        <module>orderConsul</module>
         <module>order</module>
-        <module>orderOpenFeign</module>
-        <module>orderHystrix</module>
     </modules>
 
     <packaging>pom</packaging>
