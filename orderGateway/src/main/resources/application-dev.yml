@@ -1,0 +1,33 @@
+# 数据源配置
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+    gateway:
+      discovery:
+        locator:
+          enabled: true    #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: payment_route_1
+#          uri: http://localhost:8100
+          uri: lb://feichai-payment-service
+          predicates:
+            - Path=/payment/messi/**
+
+        - id: payment_route_2
+#          uri: http://localhost:8100
+          uri: lb://feichai-payment-service
+          predicates:
+            - Path=/payment/ok
+
+        - id: payment_route_3
+#            uri: http://localhost:8100
+          uri: lb://feichai-payment-service
+          predicates:
+            - Path=/work/status
+feign:
+  hystrix:
+    enabled: true

@@ -16,6 +16,7 @@
         <module>order</module>
         <module>orderOpenFeign</module>
         <module>orderHystrix</module>
+        <module>orderGateway</module>
     </modules>
 
     <packaging>pom</packaging>
