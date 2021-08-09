@@ -275,6 +275,13 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${lang.version}</version>
             </dependency>
+
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
