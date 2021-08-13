@@ -1,4 +1,6 @@
 com\feichai\basejar\commons\CommonResult.class
+com\feichai\basejar\utils\PrintGirlUtils.class
+com\feichai\basejar\utils\TestUtils.class
 com\feichai\basejar\entities\Order.class
 com\feichai\basejar\enums\ResultCode.class
 com\feichai\basejar\utils\AddressUtils.class
