@@ -1,13 +1,24 @@
 package com.feichai.basejar.entities;
 
-import lombok.Data;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.*;
+import org.apache.ibatis.annotations.ConstructorArgs;
 
 @Data
+@TableName("order")
+@AllArgsConstructor
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class Order {
+    @TableId(value = "ID", type = IdType.AUTO)
     private String id;
+    @NonNull
     private String orderId;
     private double orderAmount;
+    @NonNull
     private String userId;
-    private String createTime;
-    private String updateTime;
+    private String createDate;
+    private String updateDate;
 }
