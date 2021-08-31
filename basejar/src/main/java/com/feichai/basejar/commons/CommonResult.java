@@ -51,4 +51,12 @@ public class CommonResult<T> implements Serializable {
         return new CommonResult(ResultCode.ERROR.getCode(),ResultCode.ERROR.getMsg(),data);
     }
 
+    @Override
+    public String toString() {
+        return "CommonResult{" +
+                "code=" + code +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }
