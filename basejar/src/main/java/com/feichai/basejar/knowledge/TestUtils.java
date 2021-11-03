@@ -1,11 +1,11 @@
-package com.feichai.basejar.utils;
+package com.feichai.basejar.knowledge;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class TestUtils {
     public static void main(String[] args) {
-        Lock lock=new ReentrantLock();
+        ReentrantLock lock=new ReentrantLock();
         lock.lock();
 
         lock.unlock();

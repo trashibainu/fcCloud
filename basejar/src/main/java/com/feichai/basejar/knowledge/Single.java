@@ -1,7 +1,5 @@
-package com.feichai.basejar.utils;
+package com.feichai.basejar.knowledge;
 
-
-import org.apache.commons.math3.analysis.function.Sin;
 
 public class Single {
     private static Single single;

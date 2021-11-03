@@ -1,4 +1,4 @@
-package com.feichai.basejar.utils;
+package com.feichai.basejar.knowledge;
 
 public class JMM {
     public static void main(String[] args) throws InterruptedException {

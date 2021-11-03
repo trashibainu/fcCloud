@@ -1,4 +1,4 @@
-package com.feichai.basejar.utils;
+package com.feichai.basejar.knowledge;
 
 import java.util.UUID;
 
