@@ -92,7 +92,7 @@ token:
 mybatis:
   typeAliasesPackage: com.feichai.other.**.domain
   configLocation: classpath:mybatis/mybatis-config.xml
-  mapperLocations: classpath*:mapper/**/*Mapper.xml
+  mapperLocations: classpath*:dao/**/*Mapper.xml
   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 # PageHelper分页插件

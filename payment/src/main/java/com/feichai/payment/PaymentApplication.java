@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.feichai.payment.mapper")
+@MapperScan("com.feichai.payment.dao")
 public class PaymentApplication {
     public static void main(String[] args) throws InterruptedException {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(PaymentApplication.class, args);

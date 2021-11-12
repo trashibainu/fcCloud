@@ -9,13 +9,13 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>basejar</module>
-<!--        <module>admin</module>-->
         <module>payment</module>
         <module>order</module>
         <module>customer</module>
         <module>message</module>
         <module>test</module>
         <module>other</module>
+        <module>admin</module>
     </modules>
 
     <packaging>pom</packaging>

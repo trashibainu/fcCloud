@@ -23,7 +23,7 @@ public class VelocityUtils
     private static final String PROJECT_PATH = "main/java";
 
     /** mybatis空间路径 */
-    private static final String MYBATIS_PATH = "main/resources/mapper";
+    private static final String MYBATIS_PATH = "main/resources/dao";
 
     /** 默认上级菜单，系统工具 */
     private static final String DEFAULT_PARENT_MENU_ID = "3";
@@ -179,9 +179,9 @@ public class VelocityUtils
         {
             fileName = StringUtils.format("{}/domain/{}.java", javaPath, genTable.getSubTable().getClassName());
         }
-        else if (template.contains("mapper.java.vm"))
+        else if (template.contains("dao.java.vm"))
         {
-            fileName = StringUtils.format("{}/mapper/{}Mapper.java", javaPath, className);
+            fileName = StringUtils.format("{}/dao/{}Mapper.java", javaPath, className);
         }
         else if (template.contains("service.java.vm"))
         {
@@ -195,7 +195,7 @@ public class VelocityUtils
         {
             fileName = StringUtils.format("{}/controller/{}Controller.java", javaPath, className);
         }
-        else if (template.contains("mapper.xml.vm"))
+        else if (template.contains("dao.xml.vm"))
         {
             fileName = StringUtils.format("{}/{}Mapper.xml", mybatisPath, className);
         }
