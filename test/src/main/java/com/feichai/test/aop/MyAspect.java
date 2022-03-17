@@ -4,33 +4,34 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
-//@Component
-//@Aspect
+@Component
+@Aspect
 public class MyAspect {
 
-    @Pointcut("execution(com.feichai.test.service.AopService.(*))")
+//    @Pointcut("execution(* com.feichai.test.service..*.*(..))")
+    @Pointcut("@annotation(com.feichai.test.annotation.Trashibainu)")
     public void pointCut(){
 
     }
 
     @Before("pointCut()")
     public void before(){
-
+        System.out.println("------------------"+"before");
     }
 
-    @After("")
+    @After("pointCut()")
     public void after(){
-
+        System.out.println("------------------"+"after");
     }
 
-    @AfterReturning("")
+    @AfterReturning("pointCut()")
     public void afterReturning(){
-
+        System.out.println("------------------"+"afterReturning");
     }
 
-    @AfterThrowing("")
+    @AfterThrowing("pointCut()")
     public void afterThrowing(){
-
+        System.out.println("------------------"+"afterThrowing");
     }
 
     @Around("pointCut()")

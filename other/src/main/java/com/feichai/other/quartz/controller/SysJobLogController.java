@@ -29,7 +29,7 @@ public class SysJobLogController extends BaseController
     /**
      * 查询定时任务调度日志列表
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:list')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:list')")
     @GetMapping("/list")
     public TableDataInfo list(SysJobLog sysJobLog)
     {
@@ -41,7 +41,7 @@ public class SysJobLogController extends BaseController
     /**
      * 导出定时任务调度日志列表
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:export')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:export')")
     @Log(title = "任务调度日志", businessType = BusinessType.EXPORT)
     @GetMapping("/export")
     public AjaxResult export(SysJobLog sysJobLog)
@@ -54,7 +54,7 @@ public class SysJobLogController extends BaseController
     /**
      * 根据调度编号获取详细信息
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:query')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:query')")
     @GetMapping(value = "/{configId}")
     public AjaxResult getInfo(@PathVariable Long jobLogId)
     {
@@ -65,7 +65,7 @@ public class SysJobLogController extends BaseController
     /**
      * 删除定时任务调度日志
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:remove')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:remove')")
     @Log(title = "定时任务调度日志", businessType = BusinessType.DELETE)
     @DeleteMapping("/{jobLogIds}")
     public AjaxResult remove(@PathVariable Long[] jobLogIds)
@@ -76,7 +76,7 @@ public class SysJobLogController extends BaseController
     /**
      * 清空定时任务调度日志
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:remove')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:remove')")
     @Log(title = "调度日志", businessType = BusinessType.CLEAN)
     @DeleteMapping("/clean")
     public AjaxResult clean()

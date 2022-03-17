@@ -24,7 +24,7 @@ import java.util.List;
  * @author ruoyi
  */
 @RestController
-@RequestMapping("/monitor/job")
+@RequestMapping("/monitor/springbatch")
 public class SysJobController extends BaseController
 {
     @Autowired
@@ -33,7 +33,7 @@ public class SysJobController extends BaseController
     /**
      * 查询定时任务列表
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:list')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:list')")
     @GetMapping("/list")
     public TableDataInfo list(SysJob sysJob)
     {
@@ -45,7 +45,7 @@ public class SysJobController extends BaseController
     /**
      * 导出定时任务列表
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:export')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:export')")
     @Log(title = "定时任务", businessType = BusinessType.EXPORT)
     @GetMapping("/export")
     public AjaxResult export(SysJob sysJob)
@@ -58,7 +58,7 @@ public class SysJobController extends BaseController
     /**
      * 获取定时任务详细信息
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:query')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:query')")
     @GetMapping(value = "/{jobId}")
     public AjaxResult getInfo(@PathVariable("jobId") Long jobId)
     {
@@ -68,7 +68,7 @@ public class SysJobController extends BaseController
     /**
      * 新增定时任务
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:add')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:add')")
     @Log(title = "定时任务", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody SysJob sysJob) throws SchedulerException, TaskException
@@ -84,7 +84,7 @@ public class SysJobController extends BaseController
     /**
      * 修改定时任务
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:edit')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:edit')")
     @Log(title = "定时任务", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@RequestBody SysJob sysJob) throws SchedulerException, TaskException
@@ -100,7 +100,7 @@ public class SysJobController extends BaseController
     /**
      * 定时任务状态修改
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:changeStatus')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:changeStatus')")
     @Log(title = "定时任务", businessType = BusinessType.UPDATE)
     @PutMapping("/changeStatus")
     public AjaxResult changeStatus(@RequestBody SysJob job) throws SchedulerException
@@ -113,7 +113,7 @@ public class SysJobController extends BaseController
     /**
      * 定时任务立即执行一次
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:changeStatus')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:changeStatus')")
     @Log(title = "定时任务", businessType = BusinessType.UPDATE)
     @PutMapping("/run")
     public AjaxResult run(@RequestBody SysJob job) throws SchedulerException
@@ -125,7 +125,7 @@ public class SysJobController extends BaseController
     /**
      * 删除定时任务
      */
-    @PreAuthorize("@ss.hasPermi('monitor:job:remove')")
+    @PreAuthorize("@ss.hasPermi('monitor:springbatch:remove')")
     @Log(title = "定时任务", businessType = BusinessType.DELETE)
     @DeleteMapping("/{jobIds}")
     public AjaxResult remove(@PathVariable Long[] jobIds) throws SchedulerException, TaskException

@@ -1,16 +1,24 @@
-#server:
-#  port: 1000
-#
-#spring:
-#  profiles:
-#    active: dev
-#  application:
-#    name: test-service
-#  datasource:
-#    type: com.alibaba.druid.pool.DruidDataSource
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://47.102.223.25:3306/spring_batch?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-#    username: root
-#    password: yuanjing
+spring:
+  profiles:
+    active: dev
+  application:
+    name: test-service
+  data:
+    mongodb:
+      authentication-database: feichai
+      host: 127.0.0.1
+      port: 27017
+      username: yuanjing
+      password: yuanjing
+      database: feichai
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.102.223.25:3306/spring_batch?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: yuanjing
 #    schema: classpath:/org/springframework/batch/core/schema-mysql.sql
-#
+
+logging:
+  level:
+    org.springframework.data.mongodb.core: debug
