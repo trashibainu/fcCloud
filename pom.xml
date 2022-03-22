@@ -16,6 +16,8 @@
         <module>test</module>
         <module>other</module>
         <module>admin</module>
+        <module>schedule</module>
+        <module>stater</module>
     </modules>
 
     <packaging>pom</packaging>

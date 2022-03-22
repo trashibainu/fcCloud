@@ -191,9 +191,9 @@ public class VelocityUtils
         {
             fileName = StringUtils.format("{}/service/impl/{}ServiceImpl.java", javaPath, className);
         }
-        else if (template.contains("controller.java.vm"))
+        else if (template.contains("producer.java.vm"))
         {
-            fileName = StringUtils.format("{}/controller/{}Controller.java", javaPath, className);
+            fileName = StringUtils.format("{}/producer/{}Controller.java", javaPath, className);
         }
         else if (template.contains("dao.xml.vm"))
         {
